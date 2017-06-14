@@ -184,3 +184,15 @@ and collide with other objects in the game.
   This automatically creates a prefab (a.k.a. template).
 * In the scene hierarchy, create an empty game object named _Pick Ups_,
   reset its transform, and drag the pick up object into it.
+* Select a top-down view of the scene by clicking on the _y_ gizmo.
+* Zoom out to see the whole scene.
+* Select the pick up and make sure the gizmo is in _Global_ mode.
+* Move the pick up to the top of the game area.
+* Duplicate the pick up 11 times and place them in a circle around the player.
+
+####  Change the Color on the Prefab
+
+* Duplicate the `Background` material and rename it `Pick Up`.
+  Set the albedo RGB to `(255, 255, 0)` (yellow).
+* Apply the material to the prefab by first selecting the prefab,
+  then opening the `Materials` folder and dragging the `Pick Up` material onto the prefab.
