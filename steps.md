@@ -259,3 +259,22 @@ and collide with other objects in the game.
   and drag the `Count Text` object onto the Player's reference field.
 * To avoid repetition,
   refactor the setting of `countText.text` into a function `void SetCountText()`.
+
+#### Displaying the Win Message
+
+* Add a new `Text` object to the scene hierarchy and name it `Win Text`.
+* Make the text white and set the font size to 24 point.
+* Reset its transform, and set the alignment to _center_ and _middle_.
+* Use `Win Text` as the placeholder text.
+* To avoid the text covering up the player object,
+  set its `Pos Y` value to 75.
+* Add a new public `Text` variable called `winText` to the `PlayerController` script.
+* In the `Start()` method, set the `winText.text` property to the empty string `""`.
+* Add the following code to the `SetCountText()` method:
+```
+    if (count >= 12) {
+      winText.text = "You Win!";
+    }
+```
+* Set the `WinText` property in the `Player` object
+  by dragging and dropping the `Win Text` object onto it.
