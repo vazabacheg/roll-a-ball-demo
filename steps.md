@@ -227,3 +227,33 @@ and collide with other objects in the game.
     Watch the pick ups disappear as they are now subject to gravity
     and physics forces.
   * Make the pick ups ignore physics forces by checking `Is Kinematic`
+
+### Displaying the Score and Text
+
+#### Adding and Incrementing a Count Variable
+
+* Open the `PlayerController` script for editing.
+* Add a private `int` variable named `count`.
+* Initialize it to zero in the `Start()` method.
+* Increment `count` by one right after setting `other.gameObject` to `false`.
+
+#### Displaying the Count Variable
+
+* Add a `Text` object from the scene hierarchy's `UI` menu.
+  Unity will automatically add a `Canvas` and an `EventSystem` object.
+  Reset its transform and rename the `Text` element `Count Text`
+* Make the text color white `(255, 255, 255)`.
+* Change the text value to `Count Text`.
+* To display the text in the upper left corner of the game window,
+  change the anchor, as well as the pivot and the position,
+  by selecting the anchor icon,
+  holding down the `Alt` and `Shift` keys and clicking on `Top Left`.
+* Move the text a bit away from the edge of the window
+  by setting `Pos X` and `Pos Y` to `10` and `-10`, respectively.
+* Add the line `using UnityEngine.UI;` at the top of the `PlayerController` script.
+* Add a new public variable of type `Text`, named `countText` to the `PlayerController` script.
+* Initialize the value of the `countText` variable by adding the line
+`countText.text = "Count: " + count.toString ();` to the `Start()` method.
+* Set the `Count Text` reference in the `Player` object's inspector
+  to the `Count Text` object by selecting the `Player` object
+  and drag the `Count Text` object onto the Player's reference field.
