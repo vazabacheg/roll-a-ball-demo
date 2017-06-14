@@ -221,3 +221,8 @@ and collide with other objects in the game.
   but the pick up collider is static just like the walls,
   preventing the colliders from overlapping.
   * Change the prefab's collider into a trigger by checking `isTrigger`.
+  * To optimize performance,
+    make the pick ups' static colliders into dynamic ones
+    by adding a `RigidBody` component to the prefab.
+    Watch the pick ups disappear as they are now subject to gravity
+    and physics forces.
