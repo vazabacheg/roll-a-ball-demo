@@ -154,6 +154,8 @@ and collide with other objects in the game.
 
 ### Creating Collectable Objects
 
+#### Create a Single Collectable Object that Rotates
+
 * Create a cube, name it _Pick Up_ and set its transform to origin.
 * Deactivate the Player object to remove it from the scene temporarily.
 * Lift the pick up onto the plane by setting its _y_ position to `0.5`.
@@ -174,3 +176,11 @@ and collide with other objects in the game.
     	}
     }
 ```
+
+#### Turn the Pick Up into a Prefab
+
+* At the top of the project hierarchy, create a folder named `Prefabs`.
+* Drag the pick up object from the scene hierarchy into the Prefabs folder.
+  This automatically creates a prefab (a.k.a. template).
+* In the scene hierarchy, create an empty game object named _Pick Ups_,
+  reset its transform, and drag the pick up object into it.
