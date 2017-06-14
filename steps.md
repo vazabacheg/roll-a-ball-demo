@@ -220,3 +220,4 @@ and collide with other objects in the game.
   because the player collider is dynamic
   but the pick up collider is static just like the walls,
   preventing the colliders from overlapping.
+  * Change the prefab's collider into a trigger by checking `isTrigger`.
