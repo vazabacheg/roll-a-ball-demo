@@ -226,3 +226,4 @@ and collide with other objects in the game.
     by adding a `RigidBody` component to the prefab.
     Watch the pick ups disappear as they are now subject to gravity
     and physics forces.
+  * Make the pick ups ignore physics forces by checking `Is Kinematic`
