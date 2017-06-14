@@ -196,3 +196,27 @@ and collide with other objects in the game.
   Set the albedo RGB to `(255, 255, 0)` (yellow).
 * Apply the material to the prefab by first selecting the prefab,
   then opening the `Materials` folder and dragging the `Pick Up` material onto the prefab.
+
+### Collecting the Pick Up Objects
+
+* Bring back the player object by enabling it again.
+* Review the player object's sphere collider reference
+  by clicking on the reference icon.
+  Then, review the corresponding scripting interface by clickin on the
+  _Switch to Scripting_ link.
+* Review the `OnTriggerEnter()` reference.
+* Add the following code to the `PlayerController` script
+  directly under the end of the `FixedUpdate()` method:
+```
+    void OnTriggerEnter (Collider other) {
+    		if (other.gameObject.CompareTag("Pick Up")) {
+    			other.gameObject.SetActive(false);
+    		}
+    	}
+  ```
+* Add a tag named `Pick Up` to the pick up prefab.
+* Select the `Pick Up` tag from the prefab's tag list to tag it.
+* Test the game and watch nothing happen,
+  because the player collider is dynamic
+  but the pick up collider is static just like the walls,
+  preventing the colliders from overlapping.
