@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		rb = GetComponent<Rigidbody> ();
 		count = 0;
-		countText.text = "Count: " + count.ToString ();
+		SetCountText ();
 	}
 
 	void FixedUpdate ()
@@ -32,7 +32,11 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag("Pick Up")) {
 			other.gameObject.SetActive(false);
 			count = count + 1;
-			countText.text = "Count: " + count.ToString();
+			SetCountText ();
 		}
+	}
+
+	void SetCountText () {
+		countText.text = "Count: " + count.ToString ();
 	}
 }

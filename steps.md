@@ -257,3 +257,5 @@ and collide with other objects in the game.
 * Set the `Count Text` reference in the `Player` object's inspector
   to the `Count Text` object by selecting the `Player` object
   and drag the `Count Text` object onto the Player's reference field.
+* To avoid repetition,
+  refactor the setting of `countText.text` into a function `void SetCountText()`.
