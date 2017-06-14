@@ -278,3 +278,13 @@ and collide with other objects in the game.
 ```
 * Set the `WinText` property in the `Player` object
   by dragging and dropping the `Win Text` object onto it.
+
+### Building the Game
+
+* Bring up the build settings by selecting `Build->Build Settings...` from the menu.
+* Stick with the default of _PC, Mac & Linux Standalone_.
+* Add the `MiniGame` scene by dragging and dropping it into the `Scenes in Build` list.
+* Click the `Build` button and create a new folder called `Builds` to store the game in.
+* Name the build `Roll a Ball'
+* This creates a Windows executable or a Mac Application Bundle,
+  depending on your platform.
