@@ -135,3 +135,16 @@ and collide with other objects in the game.
 * Fill the `Player` reference in the `CameraController` script
   by dragging the Player object from the scene hierarchy onto the corresponding slot
   in the script.
+
+## Setting up the Play Area
+
+* Create an empty game object to serve as a container for the four walls
+  surrounding the play area.
+  Make sure the transform is reset to the origin.
+* Create a new cube called _West Wall_ and make it a child of the _Walls_ object.
+* Scale the cube to `(0.5, 2, 20.5)`.
+* Set the cube's position to `(-10, 0, 0)`.
+* Duplicate the West Wall by selecting it and then using `Edit->Duplicate`.
+* Rename it _East Wall_ and set the position to `(10, 0, 0)`.
+* Duplicate the East Wall and rename it _North Wall_.
+* Set its position to `(0, 0, 10)` and its scale to `20.5, 2, 0.5`.
