@@ -148,3 +148,29 @@ and collide with other objects in the game.
 * Rename it _East Wall_ and set the position to `(10, 0, 0)`.
 * Duplicate the East Wall and rename it _North Wall_.
 * Set its position to `(0, 0, 10)` and its scale to `20.5, 2, 0.5`.
+* Duplicate the North Wall, rename it _South Wall_ and position it at `0, 0, -10`.
+
+## Collecting, Scoring, and Building the Game
+
+### Creating Collectable Objects
+
+* Create a cube, name it _Pick Up_ and set its transform to origin.
+* Deactivate the Player object to remove it from the scene temporarily.
+* Lift the pick up onto the plane by setting its _y_ position to `0.5`.
+* Let the pick up float by scaling it to `(0.5, 0.5, 0.5)`
+  and rotating it by `(45, 45, 45)`.
+* Add a script to the pick up, call it `Rotator`,
+  place it into the `Scripts` folder, and open it for editing.
+* Replace the template with the following code:
+```
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class Rotator : MonoBehaviour {
+
+    	void Update () {
+    		transform.Rotate(new Vector3 (15, 30, 45) * Time.deltaTime);
+    	}
+    }
+```
